@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Renis ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins','Segoe UI',sans-serif;
+}
+
+body{
+  background:#0f1224;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulseText{
+  0%{opacity:.6}
+  50%{opacity:1}
+  100%{opacity:.6}
+}
+
+/* ================= INTRO ================= */
+#intro{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(180deg,#ff9fbc,#1b1f3b);
+}
+
+.intro-content{
+  text-align:center;
+  animation:fadeIn 1.5s ease;
+}
+
+.heart-btn{
+  width:180px;
+  height:180px;
+  animation:pulse 2s infinite;
+  cursor:pointer;
+}
+
+.heart-btn img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.click-here{
+  margin-top:20px;
+  font-size:1.2rem;
+  animation:pulseText 2s infinite;
+}
+
+/* ================= ALBUM ================= */
+#album{
+  display:none;
+  min-height:100vh;
+  background:url('media/snoppy.jpg') center center / cover no-repeat fixed;
+}
+
+.overlay{
+  min-height:100vh;
+  background:rgba(10,10,25,0.70);
+  backdrop-filter:blur(6px);
+  padding-bottom:80px;
+}
+
+/* ================= MENU ================= */
+nav{
+  position:sticky;
+  top:0;
+  z-index:10;
+  background:rgba(20,20,40,0.85);
+  backdrop-filter:blur(10px);
+  padding:15px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#ffd6e0;
+  padding:10px 20px;
+  border-radius:30px;
+  transition:.3s;
+}
+
+nav a:hover{
+  background:#ff7aa2;
+  color:#1a1a2e;
+}
+
+/* ================= SECCIONES ================= */
+section{
+  max-width:1000px;
+  margin:90px auto 0;
+  padding:45px;
+  background:rgba(255,255,255,0.12);
+  border-radius:30px;
+  animation:fadeIn 1s ease forwards;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#ff9fbc;
+}
+
+/* ================= GALERÍA ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.gallery img,
+.gallery video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:22px;
+  transition:.35s;
+}
+
+.gallery img:hover,
+.gallery video:hover{
+  transform:scale(1.06);
+}
+
+/* ================= MÚSICA ================= */
+.song{
+  background:rgba(255,255,255,0.15);
+  padding:22px;
+  border-radius:22px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.song audio{
+  width:100%;
+  margin-top:12px;
+}
+
+/* ================= MENSAJE (SIN CAMBIAR TEXTO) ================= */
+.mensaje-carta{
+  max-width:720px;
+  margin:0 auto;
+  text-align:justify;
+  text-align-last:left;
+  line-height:1.9;
+  font-size:1.05rem;
+  color:#f1f1f1;
+  hyphens:auto;
+}
+
+.mensaje-carta p{
+  margin-bottom:20px;
+}
+
+.mensaje-destinatario{
+  text-align:center;
+  font-weight:600;
+  margin-bottom:30px;
+  color:#ffd6e0;
+}
+
+.mensaje-firma{
+  margin-top:40px;
+  text-align:right;
+  font-style:italic;
+  color:#ffd6e0;
+}
+
+footer{
+  text-align:center;
+  margin-top:90px;
+  opacity:.85;
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div id="intro">
+  <div class="intro-content">
+    <div class="heart-btn" id="openAlbum">
+      <img src="media/corazon.png">
+    </div>
+    <p class="click-here">Haz click aquí ❤️</p>
+  </div>
+</div>
+
+<!-- ALBUM -->
+<div id="album">
+<div class="overlay">
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#recuerdos">Recuerdos</a>
+  <a href="#musica">Música</a>
+  <a href="#mensaje">Mensaje</a>
+</nav>
+
+<section id="inicio">
+  <h2>Para Renis ❤️</h2>
+  <p style="text-align:center">Este álbum es un regalo hecho con amor para ti mi renis hermosaaaaaa!!!.</p>
+</section>
+
+<section id="recuerdos">
+  <h2>Recuerdos</h2>
+  <div class="gallery">
+    <img src="media/bebidas.jpeg">
+    <img src="media/mirador.jpeg">
+    <img src="media/ojito renis.jpeg">
+    <img src="media/ojitos.jpeg">
+    <video src="media/canas.mp4" controls></video>
+  </div>
+</section>
+
+<section id="musica">
+  <h2>Música que me recuerda a ti 🎶</h2>
+
+  <div class="song">
+    <p>💖 Juice WRLD - Die With You</p>
+    <audio controls src="music/die.mp3"></audio>
+  </div>
+
+  <div class="song">
+    <p>✨ VIDEOCLUB - Roi</p>
+    <audio controls src="music/roi.mp3"></audio>
+  </div>
+
+  <div class="song">
+    <p>🌟 The Marias - Cariño</p>
+    <audio controls src="music/carino.mp3"></audio>
+  </div>
+</section>
+
+<section id="mensaje">
+<h2>Mensaje</h2>
+
+<div class="mensaje-carta">
+
+<div class="mensaje-destinatario">
+Renis
+</div>
+
+<p>
+Hoy, en este día tan especial como lo es la Navidad, quiero tomar este espacio
+para expresarte todo lo que me has hecho sentir en esta etapa de mi vida.
+A veces las palabras no alcanzan para decir lo que uno guarda en el corazón,
+pero aun así quiero intentarlo.
+</p>
+
+<p>
+Desde el momento en que llegaste a mi vida, todo comenzó a cambiar.
+Mis días se volvieron más alegres, más ligeros y con un sentido diferente.
+Sin darme cuenta, te fuiste convirtiendo en una parte importante de mi día a día,
+en alguien que logra sacarme sonrisas incluso en los momentos más simples.
+</p>
+
+<p>
+Contigo aprendí que la tranquilidad también es una forma de felicidad,
+que una conversación sincera puede iluminar cualquier momento y que la
+compañía correcta hace que todo se sienta mejor.
+Tu forma de ser, tu esencia y tu manera de ver la vida han dejado una huella
+muy bonita en mí.
+</p>
+
+<p>
+Quiero agradecerte por cada momento compartido, por cada risa,
+por cada palabra y por la forma tan especial en la que has llegado a mi vida.
+Gracias por ser tú, por tu apoyo, por tu paciencia y por hacerme sentir
+acompañado de una manera tan genuina.
+</p>
+
+<p>
+Esta Navidad es distinta, porque ahora tiene tu nombre,
+tu presencia y todo lo que representas para mí.
+Deseo que estas fechas estén llenas de paz, amor y alegría para ti,
+y que nunca te falten motivos para sonreír.
+</p>
+
+<p>
+Solo quería que supieras lo importante que eres para mí
+y lo mucho que valoro tenerte en mi vida.
+Gracias por existir y por formar parte de este capítulo tan bonito.
+</p>
+
+<div class="mensaje-firma">
+Con cariño y amor,<br>
+Nico 🎄💖
+</div>
+
+</div>
+</section>
+
+<footer>Hecho con amor 💕</footer>
+
+</div>
+</div>
+
+<script>
+document.getElementById('openAlbum').onclick = ()=>{
+  document.getElementById('intro').style.display='none';
+  document.getElementById('album').style.display='block';
+};
+</script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins','Segoe UI',sans-serif;
+}
+
+body{
+  background:#0f1224;
+  color:#fff;
+  overflow-x:hidden;
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+  100%{transform:scale(1)}
+}
+
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pulseText{
+  0%{opacity:.6}
+  50%{opacity:1}
+  100%{opacity:.6}
+}
+
+/* ================= INTRO ================= */
+#intro{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: radial-gradient(circle at top,#ffb6c9 0%,#1b1f3b 55%,#0b0f24 100%);
+}
+
+.intro-content{
+  text-align:center;
+  animation:fadeIn 1.5s ease;
+}
+
+.heart-btn{
+  width:180px;
+  height:180px;
+  animation:pulse 2s infinite;
+  cursor:pointer;
+  margin:auto;
+}
+
+.heart-btn img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+.click-here{
+  margin-top:20px;
+  font-size:1.2rem;
+  animation:pulseText 2s infinite;
+}
+
+/* ================= ALBUM ================= */
+#album{
+  display:none;
+  min-height:100vh;
+  background:url('media/snoppy.jpg') center / cover no-repeat fixed;
+}
+
+.overlay{
+  min-height:100vh;
+  background:rgba(10,10,30,.65);
+  backdrop-filter:blur(4px);
+  padding-bottom:80px;
+}
+
+/* ================= MENU ================= */
+nav{
+  position:sticky;
+  top:0;
+  background:rgba(20,20,40,.85);
+  backdrop-filter:blur(10px);
+  padding:15px;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#ffd6e0;
+  padding:10px 18px;
+  border-radius:30px;
+  transition:.3s;
+}
+
+nav a:hover{
+  background:#ff7aa2;
+  color:#1a1a2e;
+}
+
+/* ================= SECCIONES ================= */
+section{
+  max-width:1000px;
+  margin:80px auto 0;
+  padding:40px;
+  background:rgba(255,255,255,.1);
+  border-radius:25px;
+  animation:fadeIn 1s ease;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:20px;
+  color:#ff9fbc;
+}
+
+/* ================= GALERÍA ================= */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.gallery img,
+.gallery video{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:.3s;
+}
+
+.gallery img:hover,
+.gallery video:hover{
+  transform:scale(1.05);
+}
+
+/* ================= MÚSICA ================= */
+.song{
+  background:rgba(255,255,255,.12);
+  padding:20px;
+  border-radius:20px;
+  margin-bottom:20px;
+  text-align:center;
+}
+
+.song audio{
+  width:100%;
+  margin-top:10px;
+}
+
+/* ================= MENSAJE CARTA ================= */
+.mensaje-carta{
+  max-width:700px;
+  margin:0 auto;
+  text-align:justify;
+  line-height:1.9;
+  font-size:1rem;
+  color:#f1f1f1;
+  hyphens:auto;
+}
+
+.mensaje-carta p{
+  margin-bottom:18px;
+}
+
+.mensaje-destinatario{
+  text-align:center;
+  font-size:1.2rem;
+  margin-bottom:25px;
+  color:#ffd6e0;
+}
+
+.mensaje-firma{
+  margin-top:35px;
+  text-align:right;
+  font-style:italic;
+  color:#ffd6e0;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  text-align:center;
+  margin-top:80px;
+  opacity:.8;
+}
